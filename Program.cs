@@ -24,51 +24,57 @@ namespace Age_Group_app
 
             int age = obj_age_group.person_age(dob);
             age_group = obj_age_group.Person_Age_Group(age);
-            
 
-            switch(age_group)
+            try
             {
-                case "Senior Citizen":
+                switch (age_group)
                 {
-                        Console.WriteLine("Walk is good for you");
-                        break;
+                    case "Senior Citizen":
+                        {
+                            Console.WriteLine("Walk is good for you");
+                            break;
+                        }
+                    case "Middle Adult":
+                        {
+                            Console.WriteLine("2 days a week of activities that strengthen muscles is good for you");
+                            break;
+                        }
+                    case "Young Adult":
+                        {
+                            Console.WriteLine("5 days a week of activities that strengthen muscles is good for you");
+                            break;
+                        }
+                    case "Adolescents":
+                        {
+                            Console.WriteLine("Play more outdoor games");
+                            break;
+                        }
+                    case "Children":
+                        {
+                            Console.WriteLine("Eating less sugar is good for you’");
+                            break;
+                        }
+                    case "Toddlers":
+                        {
+                            Console.WriteLine("Don’t go with stranger");
+                            break;
+                        }
+                    case "Infants":
+                        {
+                            Console.WriteLine("Enjoy");
+                            break;
+                        }
+                    default:
+                        {
+                            Console.WriteLine("Invalid");
+                            break;
+                        }
                 }
-                case "Middle Adult":
-                    {
-                        Console.WriteLine("2 days a week of activities that strengthen muscles is good for you");
-                        break;
-                    }
-                case "Young Adult":
-                    {
-                        Console.WriteLine("5 days a week of activities that strengthen muscles is good for you");
-                        break;
-                    }
-                case "Adolescents":
-                    {
-                        Console.WriteLine("Play more outdoor games");
-                        break;
-                    }
-                case "Children":
-                    {
-                        Console.WriteLine("Eating less sugar is good for you’");
-                        break;
-                    }
-                case "Toddlers":
-                    {
-                        Console.WriteLine("Don’t go with stranger");
-                        break;
-                    }
-                case "Infants":
-                    {
-                        Console.WriteLine("Enjoy");
-                        break;
-                    }
-                default:
-                    {
-                        Console.WriteLine("Invalid");
-                            break; }
             }
-           
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
             Console.ReadKey();
         }
 
